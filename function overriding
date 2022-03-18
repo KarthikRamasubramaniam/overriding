@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+
+class a
+{
+    public:
+    void display()
+    {
+        cout<<"base class"<<endl;
+    }
+};
+
+class b:public a
+{
+    public:
+    void display()
+    {
+        cout<<"derived class"<<endl;
+    }
+};
+
+
+int main()
+{
+    b obj;
+    obj.display();
+    obj.a::display();
+    return 0;
+}
+
+
+OUTPUT:
+derived class
+base class
